@@ -1,0 +1,49 @@
+[tool.poetry]
+name = "ocpp"
+version = "0.6.4"
+description = "Python package implementing the JSON version of the Open Charge Point Protocol (OCPP)."
+authors = [
+	"Andre Duarte <andre.duarte@mobilityhouse.com>",
+	"Auke Willem Oosterhoff <aukewillem.oosterhoff@mobilityhouse.com>",
+	"Greg Lutostanski <greg.lutostanski@mobilityhouse.com>",
+	"Jonathan Herrmann <jonathan.herrmann@mobilityhouse.com>",
+	"Laysa Uchoa <laysa.uchoadasilva@mobilityhouse.com>",
+	"Oz N Tiram, https://github.com/oz123",
+	"Patrick Roelke <patrick.roelke@mobilityhouse.com>",
+	"Roger <roger.duran@mobilityhouse.com>",
+	"dx <dx@mobilityhouse.com>",
+	"Jan Vincke <jan.vincke@mobilityhouse.com>",
+]
+repository = "https://github.com/mobilityhouse/ocpp"
+documentation = "https://ocpp.readthedocs.io/en/latest/"
+license = "MIT"
+readme = "README.rst"
+
+classifiers = [
+    'Development Status :: 5 - Production/Stable',
+    'License :: OSI Approved :: MIT License',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3.8',
+    'Programming Language :: Python :: 3.7',
+    'Programming Language :: Python :: 3.6',
+]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+# The dataclasses module is not in the stdlib in Python 3.6.
+dataclasses = { version = "^0.6", python = "~3.6" }
+jsonschema = "^3.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^4.5"
+pytest-asyncio = "^0.10.0"
+asynctest = "^0.13.0"
+freezegun = "^0.3.12"
+flake8 = "^3.7"
+pytest-cov = "^2.7"
+sphinx = "^2.1"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
